@@ -1,0 +1,170 @@
+/* Switch Suite site. Same tokens as the Android hub (ui/theme/Theme.kt). No external requests. */
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --accent: #007AFF;
+  --bg: #F2F2F7;
+  --surface: #FFFFFF;
+  --label: #000000;
+  --secondary: rgba(60, 60, 67, 0.6);
+  --separator: rgba(60, 60, 67, 0.29);
+  --chip-bg: rgba(120, 120, 128, 0.16);
+  --radius: 16px;
+  --max: 1040px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #0A84FF;
+    --bg: #000000;
+    --surface: #1C1C1E;
+    --label: #FFFFFF;
+    --secondary: rgba(235, 235, 245, 0.6);
+    --separator: rgba(84, 84, 88, 0.65);
+    --chip-bg: rgba(120, 120, 128, 0.32);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--label);
+  font-family: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header { padding: 18px 0; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--label); font-weight: 600; }
+.brand:hover { text-decoration: none; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.nav { display: flex; gap: 20px; font-size: 15px; }
+.nav a { color: var(--secondary); }
+.nav a[aria-current="page"] { color: var(--label); font-weight: 600; }
+
+/* Hero */
+.hero { padding: 48px 0 24px; }
+.hero h1 {
+  margin: 0;
+  font-size: clamp(40px, 8vw, 64px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.lede { margin: 14px 0 0; max-width: 640px; font-size: clamp(19px, 2.6vw, 22px); color: var(--secondary); }
+.tagline { margin: 6px 0 0; font-size: 15px; color: var(--secondary); }
+
+/* Module cards */
+.section-title {
+  margin: 40px 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+}
+.card .icon svg { width: 30px; height: 30px; fill: #fff; }
+.card h3 { margin: 4px 0 0; font-size: 19px; font-weight: 600; }
+.card p { margin: 0; font-size: 15px; color: var(--secondary); flex: 1; }
+.status {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.icon-courier { background: linear-gradient(#5AC8FA, #007AFF); }
+.icon-nightstand { background: linear-gradient(#5E5CE6, #1C1C3A); }
+.icon-relay { background: linear-gradient(#FFCC00, #FF9500); }
+.icon-deskthread { background: linear-gradient(#34C759, #248A3D); }
+
+/* Text pages */
+.page { padding: 24px 0 8px; max-width: 760px; }
+.page h1 { margin: 16px 0 4px; font-size: clamp(32px, 6vw, 44px); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; }
+.page h2 { margin: 36px 0 8px; font-size: 22px; font-weight: 600; }
+.page h3 { margin: 24px 0 6px; font-size: 18px; font-weight: 600; }
+.page p, .page li { color: var(--label); }
+.page .meta { color: var(--secondary); font-size: 15px; margin: 0; }
+.page code { font-size: 15px; background: var(--chip-bg); padding: 1px 6px; border-radius: 6px; }
+.panel { background: var(--surface); border-radius: var(--radius); padding: 4px 20px; margin: 16px 0; }
+.panel h3 { margin-top: 16px; }
+
+.contact {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.contact:hover { text-decoration: none; filter: brightness(1.08); }
+
+.about { margin-top: 40px; max-width: 760px; }
+.about p { color: var(--secondary); }
+
+/* Footer */
+.site-footer { margin-top: 56px; padding: 24px 0 40px; border-top: 0.5px solid var(--separator); font-size: 14px; color: var(--secondary); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.site-footer nav { display: flex; gap: 18px; }
+.site-footer a { color: var(--secondary); }
+
+@media (max-width: 520px) {
+  .nav { gap: 14px; }
+  .hero { padding-top: 28px; }
+}

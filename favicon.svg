@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0051D5"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" rx="24" fill="url(#g)"/>
+  <!-- Placeholder "S" mark: the same two arcs as the Switch Suite app icon, scaled up from its 66dp safe zone. -->
+  <path d="M63.53,37.5 A11,11 0 1,0 54,54 A11,11 0 1,1 44.47,70.5" transform="translate(54 54) scale(1.6) translate(-54 -54)"
+        fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
