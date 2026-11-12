@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relay Privacy Policy · Switch Suite</title>
+<meta name="description" content="Privacy policy for Relay by Switch Suite.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/icon-192.png" alt="" width="28" height="28">Switch Suite</a>
+    <nav class="nav" aria-label="Main"><a href="../../">Home</a><a href="../../privacy/" aria-current="page">Privacy</a><a href="../../support/">Support</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article class="page">
+<p class="meta"><a href="../">&larr; Privacy</a></p>
+<h1>Relay by Switch Suite: Privacy Policy</h1>
+<p class="meta">Last updated: November 11, 2026</p>
+<p>Relay by Switch Suite ("Relay", "the app") is a Mac app published by Switch Suite. It keeps lists you choose in Apple Reminders on your Mac in sync with your Google Tasks. <strong>Switch Suite has no server for Relay and doesn't receive your lists, your Google account or any other personal data.</strong> Your lists move only between your Mac, Apple's Reminders service (which Apple syncs through iCloud if you use it) and your Google Tasks.</p>
+<h2>What Relay reads and writes</h2>
+<p>With your permission (macOS asks once), Relay reads and updates <strong>only the Reminders lists you pair</strong>. For each item it syncs the title, notes, whether it's completed, and the due date. It doesn't read or change any other list, or other details such as alarms, priority, flags, tags, locations, URLs or attachments.</p>
+<p>When you sign in with Google, Relay asks Google only for access to <strong>Google Tasks</strong>. It reads and updates the Google Tasks lists you pair, over an encrypted connection (HTTPS) directly between your Mac and Google.</p>
+<h2>The sync marker</h2>
+<p>So that two Macs don't sync the same list at once, Relay keeps one completed task named "Relay sync marker (keep this completed)" in each Google Tasks list you pair. Its notes contain a random ID for your Mac, your Mac's name (as set in System Settings → General → Sharing) and the time it last synced. It's visible under Completed in Google Tasks. Removing the pair doesn't delete it; you can delete it yourself.</p>
+<h2>What's stored on your Mac</h2>
+<p>Relay keeps the following only on your Mac:</p>
+<ul>
+  <li>your settings and which lists are paired;</li>
+  <li>a sync database, so it knows what changed since the last sync. It contains the titles, notes, completion and due dates of synced items;</li>
+  <li>a log of recent sync activity, which includes item titles;</li>
+  <li>your Google sign-in token, in the macOS keychain, kept on this Mac only (it isn't synced to other devices).</li>
+</ul>
+<p>The settings, database and log are stored in Relay's own private app storage on your Mac.</p>
+<h2>How Relay uses Google user data</h2>
+<p>Relay uses the data it gets through Google Tasks only to keep your paired lists in sync, as you set them up. It doesn't send that data to Switch Suite or anyone else. It doesn't use it for advertising, and it doesn't use it to train AI or machine-learning models. Relay's use and transfer of information received from Google APIs follows the Google API Services User Data Policy, including the Limited Use requirements: <a href="https://developers.google.com/terms/api-services-user-data-policy">https://developers.google.com/terms/api-services-user-data-policy</a></p>
+<h2>Purchases</h2>
+<p>Relay Pro is a one-time in-app purchase made through <strong>Apple's App Store</strong>. Apple processes the payment; Switch Suite never sees your payment details. To check whether you own Relay Pro, the app asks the App Store on your Mac and keeps only "Pro: yes/no" on your Mac.</p>
+<h2>What Relay doesn't do</h2>
+<p>Relay has no ads, no analytics, no crash reporting and no Switch Suite account. Its alerts are notifications on your Mac; nothing is emailed or sent anywhere.</p>
+<h2>Deleting your data</h2>
+<ul>
+  <li><strong>Settings → Google → Sign Out</strong> removes Relay's Google sign-in token from your keychain. You can also remove Relay's access at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+  <li><strong>Removing a pair</strong> stops syncing those lists. Your items in Reminders and Google Tasks stay as they are.</li>
+  <li><strong>Deleting the app</strong> and its data (in the Finder, or with an uninstaller) deletes everything Relay stored on your Mac.</li>
+  <li>Relay changes items in Reminders or Google Tasks only to mirror changes you made on the other side, including deletions, as you chose when you paired the lists ("Mark it completed" or "Delete it too"). If a sync would remove a lot of items at once, Relay stops and asks you first.</li>
+</ul>
+<h2>Children</h2>
+<p>Relay is not directed at children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at <a href="https://switchsuite.io/privacy/relay/">https://switchsuite.io/privacy/relay/</a> with a new "Last updated" date.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <strong><a href="mailto:support@switchsuite.io">support@switchsuite.io</a></strong></p>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Switch Suite</span>
+    <nav aria-label="Footer"><a href="../../privacy/">Privacy</a><a href="../../support/">Support</a><a href="mailto:support@switchsuite.io">support@switchsuite.io</a></nav>
+  </div>
+</footer>
+</body>
+</html>
