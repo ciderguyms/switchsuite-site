@@ -131,6 +131,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
 .icon-courier { background: linear-gradient(#5AC8FA, #007AFF); }
 .icon-nightstand { background: linear-gradient(#5E5CE6, #1C1C3A); }
 .icon-relay { background: linear-gradient(#FFCC00, #FF9500); }
+.icon-couch { background: #D9622B; }
 .icon-deskthread { background: linear-gradient(#34C759, #248A3D); }
 
 /* Text pages */
