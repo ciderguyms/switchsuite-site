@@ -25,43 +25,63 @@
 <h1>Relay by Switch Suite: Privacy Policy</h1>
 <p class="meta">Last updated: November 14, 2026</p>
 <p>Relay by Switch Suite ("Relay", "the app") is a Mac app published by Switch Suite. It keeps lists you choose in Apple Reminders on your Mac in sync with your Google Tasks. <strong>Switch Suite has no server for Relay and doesn't receive your lists, your Google account or any other personal data.</strong> Your lists move only between your Mac, Apple's Reminders service (which Apple syncs through iCloud if you use it) and your Google Tasks.</p>
-<h2>What Relay reads and writes</h2>
-<p>With your permission (macOS asks once), Relay reads and updates <strong>only the Reminders lists you pair</strong>. For each item it syncs the title, notes, whether it's completed, and the due date. It doesn't read or change any other list, or other details such as alarms, priority, flags, tags, locations, URLs or attachments.</p>
-<p>When you sign in with Google, Relay asks Google only for access to <strong>Google Tasks</strong>. It reads and updates the Google Tasks lists you pair, over an encrypted connection (HTTPS) directly between your Mac and Google.</p>
-<h2>The sync marker</h2>
-<p>So that two Macs don't sync the same list at once, Relay keeps one completed task named "Relay sync marker (keep this completed)" in each Google Tasks list you pair. Its notes contain a random ID for your Mac, your Mac's name (as set in System Settings → General → Sharing) and the time it last synced. It's visible under Completed in Google Tasks. Removing the pair doesn't delete it; you can delete it yourself.</p>
-<h2>What's stored on your Mac</h2>
-<p>Relay keeps the following only on your Mac:</p>
+<h2>Data accessed</h2>
+<p><strong>Google user data.</strong> When you sign in with Google, Relay asks Google for one permission only: the Google Tasks scope (<code><a href="https://www.googleapis.com/auth/tasks">https://www.googleapis.com/auth/tasks</a></code>). It doesn't ask for your email address, profile, contacts or any other Google data. With that permission Relay accesses:</p>
 <ul>
-  <li>your settings and which lists are paired;</li>
-  <li>a sync database, so it knows what changed since the last sync. It contains the titles, notes, completion and due dates of synced items;</li>
-  <li>a log of recent sync activity, which includes item titles;</li>
-  <li>your Google sign-in token, in the macOS keychain, kept on this Mac only (it isn't synced to other devices).</li>
+  <li><strong>your task lists:</strong> their names and IDs, so you can pick which Google Tasks list to pair (and, if you ask, create a new list);</li>
+  <li><strong>the tasks in the lists you pair:</strong> each task's title, notes, due date and completion status, plus the task's ID and last-modified time, which Relay uses to match items and notice changes.</li>
 </ul>
-<p>The settings, database and log are stored in Relay's own private app storage on your Mac.</p>
-<h2>How Relay uses Google user data</h2>
-<p>Relay uses the data it gets through Google Tasks only to keep your paired lists in sync, as you set them up. It doesn't send that data to Switch Suite or anyone else. It doesn't use it for advertising, and it doesn't use it to train AI or machine-learning models. Relay's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements: <a href="https://developers.google.com/terms/api-services-user-data-policy">https://developers.google.com/terms/api-services-user-data-policy</a></p>
-<h2>Sharing, transfer, and disclosure of Google user data</h2>
+<p>Relay doesn't read tasks in Google Tasks lists you haven't paired.</p>
+<p><strong>Reminders on your Mac.</strong> With your permission (macOS asks once), Relay reads and updates <strong>only the Reminders lists you pair</strong>. For each item it syncs the title, notes, whether it's completed, and the due date. It doesn't read or change any other list, or other details such as alarms, priority, flags, tags, locations, URLs or attachments.</p>
+<h2>Data use</h2>
+<p>Relay uses the data it accesses only to keep the list pairs you chose in sync, as you set them up. That means:</p>
 <ul>
-<li><strong>What Relay accesses.</strong> Relay accesses your Google Tasks data only to sync the lists you chose to pair.</li>
-<li><strong>Where it goes.</strong> Google user data is transferred only between your own Mac and Google's servers, and to Apple Reminders (and iCloud, if you use it) on your own devices, to perform the sync you asked for.</li>
-<li><strong>No sharing with anyone else.</strong> Relay and Switch Suite do not share, sell, transfer or disclose Google user data to any third party. Switch Suite itself never receives it: there is no Switch Suite server.</li>
-<li><strong>No advertising, data brokers or AI training.</strong> Google user data is never used for advertising, never given or sold to data brokers or other information resellers, and never used to develop, improve or train AI or machine-learning models.</li>
-<li><strong>Legal requirements.</strong> The only exception would be a disclosure required by law. None occurs in normal operation, and because Switch Suite never receives Google user data, it has none to disclose.</li>
-<li><strong>Your sign-in token.</strong> The OAuth token Relay uses to reach Google Tasks is stored in the macOS keychain on your Mac.</li>
-<li><strong>Revoking access.</strong> You can revoke Relay's access at any time: Settings → Google → Sign Out in Relay, or at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+  <li>showing your task lists so you can choose one to pair;</li>
+  <li>copying additions, edits, completions and deletions between each Reminders list and the Google Tasks list paired with it;</li>
+  <li>keeping one sync marker task in each paired Google Tasks list (see "Data retention and deletion").</li>
+</ul>
+<p>It doesn't use your data for advertising, analytics or profiling, and it doesn't use it to develop, improve or train AI or machine-learning models. Relay's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements: <a href="https://developers.google.com/terms/api-services-user-data-policy">https://developers.google.com/terms/api-services-user-data-policy</a></p>
+<h2>Data transfer: Sharing, transfer, and disclosure of Google user data</h2>
+<ul>
+  <li><strong>What Relay accesses.</strong> Relay accesses your Google Tasks data only to sync the lists you chose to pair.</li>
+  <li><strong>Where it goes.</strong> Google user data is transferred only between your own Mac and Google's servers, and to Apple Reminders (and iCloud, if you use it) on your own devices, to perform the sync you asked for.</li>
+  <li><strong>No sharing with anyone else.</strong> Relay and Switch Suite do not share, sell, transfer or disclose Google user data to any third party. Switch Suite itself never receives it: there is no Switch Suite server.</li>
+  <li><strong>No advertising, data brokers or AI training.</strong> Google user data is never used for advertising, never given or sold to data brokers or other information resellers, and never used to develop, improve or train AI or machine-learning models.</li>
+  <li><strong>Legal requirements.</strong> The only exception would be a disclosure required by law. None occurs in normal operation, and because Switch Suite never receives Google user data, it has none to disclose.</li>
+  <li><strong>Your sign-in token.</strong> The OAuth token Relay uses to reach Google Tasks is stored in the macOS keychain on your Mac.</li>
+  <li><strong>Revoking access.</strong> You can revoke Relay's access at any time: Settings → Google → Sign Out in Relay, or at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+</ul>
+<h2>Data protection</h2>
+<ul>
+  <li><strong>Encrypted in transit.</strong> Relay talks to Google only over HTTPS (TLS), directly between your Mac and Google's servers (accounts.google.com, oauth2.googleapis.com and tasks.googleapis.com).</li>
+  <li><strong>Secure sign-in.</strong> Sign-in happens in your web browser on Google's own pages, using OAuth with PKCE. Relay never sees your Google password.</li>
+  <li><strong>Token in the macOS keychain.</strong> Relay's Google sign-in token (the OAuth refresh token) is stored in the macOS keychain, available only on this Mac and never synced to other devices. Short-lived access tokens are kept in memory only.</li>
+  <li><strong>Processed only on your Mac.</strong> All syncing happens on your Mac. There's no Switch Suite server, so your data is never stored or processed by Switch Suite.</li>
+  <li><strong>Sandboxed app.</strong> Relay runs in the macOS App Sandbox. Its files are kept in its own private container, which other apps can't read without your permission.</li>
+</ul>
+<h2>Data retention and deletion</h2>
+<p><strong>What Relay stores on your Mac, and where.</strong> Everything is kept in Relay's private app container, <code>~/Library/Containers/io.switchsuite.relay/</code>, except the sign-in token, which is in the macOS keychain:</p>
+<ul>
+  <li><strong>Settings</strong> (<code>config.json</code>): which lists are paired, their names and IDs, and your choices. Kept until you change them or delete the app.</li>
+  <li><strong>Sync database</strong> (<code>state.sqlite</code>): for each synced item, the mapping between its Reminders ID and its Google Tasks ID, and a copy of the last synced title, notes, completion and due date, so Relay can tell what changed; also each pair's sync status and a record of recent sync conflicts. Kept while the pair exists; deleted when you remove the pair.</li>
+  <li><strong>Activity log</strong> (<code>relay.log</code>): recent sync activity and errors, which can include item titles. Rotated automatically: once the log reaches 5 MB it's rotated, and at most 5 older files are kept.</li>
+  <li><strong>Alert state</strong> (<code>alerts.json</code>): whether a problem notification is in progress. Kept until the problem clears.</li>
+  <li><strong>Google sign-in token:</strong> the OAuth refresh token, in the keychain item "io.switchsuite.relay.google". Kept until you sign out.</li>
+</ul>
+<p><strong>The sync marker task.</strong> So that two Macs don't sync the same list at once, Relay keeps one completed task named "Relay sync marker (keep this completed)" in each Google Tasks list you pair. Its notes contain a random ID for your Mac, your Mac's name (as set in System Settings → General → Sharing) and the time it last synced. It's visible under Completed in Google Tasks and stays in your Google account. To delete it, open the list in Google Tasks, expand Completed and delete that task. If the pair still exists, Relay adds it again at the next sync, so remove the pair first.</p>
+<p><strong>How to delete your data.</strong></p>
+<ul>
+  <li><strong>Sign Out</strong> (Relay → Settings → Google → Sign Out) deletes Relay's Google sign-in token from the keychain and revokes it at Google.</li>
+  <li><strong>Removing a pair</strong> stops syncing those lists and deletes that pair's sync state (its item mappings, status and conflict records) from the sync database. Your items in Reminders and Google Tasks stay as they are.</li>
+  <li><strong>Uninstalling:</strong> quit Relay (sign out first if you want the token revoked at Google), then delete the app and its container folder <code>~/Library/Containers/io.switchsuite.relay/</code>, in the Finder or with an uninstaller. This deletes everything Relay stored on your Mac. macOS doesn't remove keychain items when an app is deleted, so if you didn't sign out, delete "io.switchsuite.relay.google" in Keychain Access.</li>
+  <li><strong>Your Google data stays yours.</strong> Your tasks and task lists are stored in your own Google account, under your control. Relay doesn't keep a copy anywhere except the sync database on your Mac described above. You can view, change or delete them in Google Tasks at any time.</li>
+  <li><strong>Revoke access</strong> at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>. Relay then can't reach your Google Tasks until you sign in again.</li>
+  <li>Relay changes items in Reminders or Google Tasks only to mirror changes you made on the other side, including deletions, as you chose when you paired the lists ("Mark it completed" or "Delete it too"). If a sync would remove a lot of items at once, Relay stops and asks you first.</li>
 </ul>
 <h2>Purchases</h2>
 <p>Relay Pro is a one-time in-app purchase made through <strong>Apple's App Store</strong>. Apple processes the payment; Switch Suite never sees your payment details. To check whether you own Relay Pro, the app asks the App Store on your Mac and keeps only "Pro: yes/no" on your Mac.</p>
 <h2>What Relay doesn't do</h2>
 <p>Relay has no ads, no analytics, no crash reporting and no Switch Suite account. Its alerts are notifications on your Mac; nothing is emailed or sent anywhere.</p>
-<h2>Deleting your data</h2>
-<ul>
-  <li><strong>Settings → Google → Sign Out</strong> removes Relay's Google sign-in token from your keychain. You can also remove Relay's access at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
-  <li><strong>Removing a pair</strong> stops syncing those lists. Your items in Reminders and Google Tasks stay as they are.</li>
-  <li><strong>Deleting the app</strong> and its data (in the Finder, or with an uninstaller) deletes everything Relay stored on your Mac.</li>
-  <li>Relay changes items in Reminders or Google Tasks only to mirror changes you made on the other side, including deletions, as you chose when you paired the lists ("Mark it completed" or "Delete it too"). If a sync would remove a lot of items at once, Relay stops and asks you first.</li>
-</ul>
 <h2>Children</h2>
 <p>Relay is not directed at children.</p>
 <h2>Changes</h2>
