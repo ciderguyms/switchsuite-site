@@ -132,7 +132,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
 .icon-nightstand { background: linear-gradient(#5E5CE6, #1C1C3A); }
 .icon-relay { background: linear-gradient(#FFCC00, #FF9500); }
 .icon-couch { background: #D9622B; }
-.icon-deskthread { background: linear-gradient(#34C759, #248A3D); }
+.icon-stayput { background: linear-gradient(#34C759, #248A3D); }
 
 /* Text pages */
 .page { padding: 24px 0 8px; max-width: 760px; }
@@ -169,3 +169,5 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
   .nav { gap: 14px; }
   .hero { padding-top: 28px; }
 }
+
+.card .subtitle { margin: -4px 0 6px; font-weight: 600; color: var(--secondary); }
